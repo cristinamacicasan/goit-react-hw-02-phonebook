@@ -1,0 +1,38 @@
+.formContainer {
+    position:relative;
+    width: 300px;
+    margin-top: 250px;
+}
+
+h1{
+    position: absolute;
+
+}
+
+.inputField {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submitButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
