@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import styles from './ContactForm.module.css'
+import Filter from './Filter';
 
 const App = () => {
   const [contacts, setContacts] = useState([
@@ -32,14 +33,8 @@ const App = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Phonebook</h1>
       <ContactForm onAddContact={addContact} />
-      <h2 className={styles.subtitle}>Contacts</h2>
-      <input
-        type="text"
-        value={filter}
-        onChange={handleChangeFilter}
-        placeholder="Search contacts..."
-        className={styles.input}
-      />
+       <h2 className={styles.subtitle}>Contacts</h2>
+      <Filter value={filter} onChange={handleChangeFilter} />
       <ContactList contacts={filteredContacts} />
     </div>
   );
