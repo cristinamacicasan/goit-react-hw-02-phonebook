@@ -31,8 +31,8 @@ const App = () => {
 
    return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Phonebook</h1>
-      <ContactForm onAddContact={addContact} />
+       <h1 className={styles.title}>Phonebook</h1>
+       <ContactForm contacts={contacts} onAddContact={addContact} />
        <h2 className={styles.subtitle}>Contacts</h2>
       <Filter value={filter} onChange={handleChangeFilter} />
       <ContactList contacts={filteredContacts} />

@@ -3,13 +3,21 @@
 import React, { useState } from 'react';
 import styles from './ContactForm.module.css'
 
-const ContactForm = ({ onAddContact }) => {
+const ContactForm = ({ contacts, onAddContact }) => {
     const [name, setName] = useState('');
      const [number, setNumber] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name.trim() || !number.trim()) return;
+      
+    const isDuplicate = contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase());
+    if (isDuplicate) {
+      alert(`Contact with name '${name}' already exists! Please choose a different name.`);
+      return;
+    }
+
+
     onAddContact({ name, number });
     setName('');
     setNumber('');
