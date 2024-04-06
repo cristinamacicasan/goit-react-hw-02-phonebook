@@ -1,6 +1,7 @@
 
 
 import React, { useState } from 'react';
+import styles from './ContactForm.module.css'
 
 const ContactForm = ({ onAddContact }) => {
   const [name, setName] = useState('');
@@ -13,7 +14,7 @@ const ContactForm = ({ onAddContact }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.formContainer} >
       <label htmlFor="name">Name:</label>
       <input
         type="text"

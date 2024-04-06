@@ -1,14 +1,17 @@
-.contactList {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.container {
+  margin-top: 30px;
 }
 
-.contactItem {
+.contact {
+  font-size: 30px;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
-.contactItem:last-child {
-  border-bottom: none;
+h2{
+  font-size: 35px;
+}
+
+h1{
+  font-size: 40px;
 }
