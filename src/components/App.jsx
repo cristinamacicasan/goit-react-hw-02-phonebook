@@ -20,6 +20,9 @@ const App = () => {
     setFilter(e.target.value);
   };
 
+  const handleDeleteContact = (id) => {
+    setContacts(prevContacts => prevContacts.filter(contact => contact.id !== id));
+  };
 
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
@@ -34,8 +37,8 @@ const App = () => {
        <h1 className={styles.title}>Phonebook</h1>
        <ContactForm contacts={contacts} onAddContact={addContact} />
        <h2 className={styles.subtitle}>Contacts</h2>
-      <Filter value={filter} onChange={handleChangeFilter} />
-      <ContactList contacts={filteredContacts} />
+       <Filter value={filter} onChange={handleChangeFilter} />
+       <ContactList contacts={filteredContacts} onDeleteContact={handleDeleteContact} />
     </div>
   );
 };
